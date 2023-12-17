@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { trending_data } from "@/data/trending";
+import SearchForm from "@/components/SearchForm";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         </h3>
       </section>
 
-      <section className="m-4 lt-0 -mb-14 px-2 lg:px-4"></section>
+      <section className="m-4 lt-0 -mb-14 px-2 lg:px-4">
+        <SearchForm />
+      </section>
 
       <section className="mx-auto max-w-7xl mt-10 p-6 bg-white rounded-t-lg">
         <div className="mt-5">
@@ -22,7 +25,10 @@ export default function Home() {
         </div>
         <div className="flex space-x-4 py-5 overflow-x-scroll ">
           {trending_data.map((item) => (
-            <div key={item.id} className="space-y-1 shrink-0 cursor-pointer scroll-smooth focus:scroll-auto">
+            <div
+              key={item.id}
+              className="space-y-1 shrink-0 cursor-pointer scroll-smooth focus:scroll-auto"
+            >
               <Image
                 key={item.id}
                 className="w-80 h-72 object-cover rounded-lg pv-2"
