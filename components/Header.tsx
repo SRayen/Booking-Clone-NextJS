@@ -56,6 +56,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Booking.com</span>
             <Image src={logo} alt="Booking.com logo" height={250} width={200} />
+            <h3 className="text-white text-xl text-center animate-bounce">SRayen</h3>
           </Link>
         </div>
 
