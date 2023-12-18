@@ -18,5 +18,6 @@
 * ➡️ **Oxylabs Web Scraper API**: Scrape data from Booking.com.
 * ➡️ **React Hook Form & Zod**: Offer a powerful solution for handling form validation and management.
 * ➡️ **Shadcn/UI**: A modern, Tailwind CSS-powered component library that offers beautifully designed, customizable components for seamless integration into web development projects.
-  
 
+ ### *Note*:
+ If you encounter a scenario where the public URL link is used and the search yields no results, it may be due to the expiration of the API credentials, which are provided free of charge, or it could also be due to limitations of the Vercel Hobby plan (requests taking more than 10 seconds to process).
