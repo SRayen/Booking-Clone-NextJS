@@ -2,7 +2,7 @@ type Props = {
   searchParams: SearchParams;
 };
 
-type SearchParams = {
+export type SearchParams = {
   url: URL;
   checkin: string;
   checkout: string;
@@ -11,15 +11,17 @@ type SearchParams = {
   no_rooms: string;
 };
 
+
+import { fetchResults } from "@/lib/fetchResults";
 import { notFound } from "next/navigation";
 import React from "react";
 
-async function SearchPage({ searchParams }: Props) {
+export default async function SearchPage({ searchParams }: Props) {
   if (!searchParams.url) return notFound();
 
   const results = await fetchResults(searchParams);
 
-  if (!results) return <div>No results ...</div>;
+  //   if (!results) return <div>No results ...</div>;
 
   return <div>SearchPage</div>;
 }
